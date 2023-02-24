@@ -9,7 +9,12 @@ export const syncAttrs = (konvaNode: Konva.Shape | Konva.Layer) => {
   watch(
     () => attrs,
     () => {
+
+    /*setAttrs(config)
+         set multiple attrs at once using an object literal */
+
       konvaNode.setAttrs(attrs);
+
     },
     { deep: true, immediate: true },
   );

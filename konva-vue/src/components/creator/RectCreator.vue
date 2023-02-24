@@ -11,6 +11,9 @@ const props = defineProps<{
   type?: TCreatorType;
 }>();
 const helper = useHelper();
+console.log(helper)
+
+//
 const emit = defineEmits(["onCreateNewShape"]);
 
 const layer: Konva.Layer = findParentKonva(instance).__konvaNode;
@@ -20,21 +23,27 @@ onMounted(() => {
     () => props.type,
     () => {
       if (props.type === "circle") {
+        //创建一个园
         shape = new Konva.Circle();
       } else if (props.type === "rect") {
+        //创建一个矩形
         shape = new Konva.Rect();
       }
 
       if (shape) {
+        //清楚所有图形 
+        /*    删除所有孩子。孩子们仍将留在记忆中。
+   如果您想完全销毁所有孩子，请改用“destroyChildren”方法 */
         layer.removeChildren();
 
         helper.next("按下鼠标绘制图形");
-
+        //图形添加到图层中
         layer.add(shape);
       }
     },
   );
 
+  //获取父容器  layer.getParent()
   const stage = layer.getParent();
 
   // 记录初始的位置

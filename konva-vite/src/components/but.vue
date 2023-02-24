@@ -1,24 +1,14 @@
-<template>
-	<div>
-		<div id="container" ref="container"></div>
-		<n-icon size="20">
-			<CartOutline />
-		</n-icon>
-
-		<n-space>
-			<n-button>naive-ui</n-button>
-			<n-button type="info">
-				点击可以移动
-			</n-button>
-		</n-space>
-	</div>
-</template>
+<template></template>
 
 <script setup lang="ts" name="but">
-import { CartOutline } from '@vicons/ionicons5'
+import Konva from 'konva';
+import { NButton } from "naive-ui";
+import { onMounted, getCurrentInstance } from "vue";
 
-import { NButton } from 'naive-ui'
+const instance: any = getCurrentInstance()
+const tr = new Konva.Transformer();
+
+
 </script>
 
 <style lang="scss" scoped></style>
-

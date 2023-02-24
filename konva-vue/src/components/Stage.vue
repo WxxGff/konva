@@ -33,6 +33,7 @@ const konvaNode = new Konva.Stage({
 
 konvaNode.setAttrs(attrs);
 
+
 //保存到instance上
 instance.__konvaNode = konvaNode;
 

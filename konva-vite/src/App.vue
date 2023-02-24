@@ -1,11 +1,11 @@
 
 <template>
-  <konva class="canvas"></konva>
+  <konva class="konva"></konva>
   <but></but>
 </template>
 <script setup lang="ts">
 
-import konva from '@/components/konva.vue'
+import konva from './components/konva.vue'
 import but from '@/components/but.vue'
 </script>
 

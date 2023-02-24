@@ -14,7 +14,11 @@ import Canvas from "./components/Canvas.vue";
 import { computed, ref } from "vue";
 import { IShape, TCreatorType } from "./components/interface";
 import { randomColor, randomNum } from "./components/utils";
+
+//创建图形的类型
 const creatorType = ref<TCreatorType | undefined>();
+
+
 const editMode = ref<Boolean>(false);
 const showRandomData = ref<Boolean>(false);
 
